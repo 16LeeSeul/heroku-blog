@@ -36,9 +36,9 @@ def login(request):
             auth.login(request, user)
             return redirect('home')
         else:
-            return render(request, 'accounts/login.html', {'error': 'username or password is incorrect.'})
+            return render(request, 'login.html', {'error': 'username or password is incorrect.'})
     else:
-        return render(request, 'accounts/login.html')
+        return render(request, 'login.html')
 
 def logout(request):
     if request.method == "POST":
